@@ -16,8 +16,8 @@
     --footer-background-dark: #196687;
     --footer-text-light: white;
     --footer-text-dark: white;
-    --toggle-icon-color-light: #f39c12;
-    --toggle-icon-color-dark: #f1c40f;
+    --toggle-icon-color-light: #000000;
+    --toggle-icon-color-dark: #ffffff;
     --toggle-border-light: #ccc;
     --toggle-border-dark: #666;
     --toggle-bg-light: rgba(0,0,0,0.03);
@@ -272,6 +272,7 @@ body.dark-mode .footer-bottom {
   top: 50%;
   transform: translateY(-50%);
   font-size: 0.9em;
+  color: white; /* Changed to white */
 }
 
 .get-quote-header-btn {
@@ -288,6 +289,7 @@ body.dark-mode .footer-bottom {
   top: 50%;
   transform: translateY(-50%);
   font-size: 0.9em;
+  color: white; /* Changed to white */
 }
 
 
@@ -365,11 +367,10 @@ body.dark-mode .panel-icon {
     margin-bottom: 8px;
     font-weight: 300;
     color: var(--dark-text);
-    position: relative; /* Needed for ::before absolute positioning */
-    padding-left: 25px; /* Make space for the icon */
+    position: relative;
+    padding-left: 25px;
 }
 
-/* Icons for form labels */
 .form-group label::before {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
@@ -378,29 +379,28 @@ body.dark-mode .panel-icon {
     top: 50%;
     transform: translateY(-50%);
     font-size: 0.9em;
-    color: var(--primary-brand-color); /* Icon color */
+    color: var(--primary-green);
     transition: color 0.3s;
 }
 
 body.dark-mode .form-group label::before {
-    color: var(--light-text); /* Icon color in dark mode */
+    color: var(--light-text);
 }
 
-/* Specific icons for each label based on their 'for' attribute (or ID) */
 label[for="planSelection"]::before {
-    content: "\f478"; /* Stethoscope icon */
+    content: "\f478";
 }
 
 label[for="age"]::before {
-    content: "\f007"; /* User icon */
+    content: "\f007";
 }
 
 label[for="dependents"]::before {
-    content: "\f0c0"; /* Users (group) icon */
+    content: "\f0c0";
 }
 
 label[for="province"]::before {
-    content: "\f3c5"; /* Map Marker Alt icon */
+    content: "\f3c5";
 }
 
 
